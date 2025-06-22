@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Me - Tern</title>
-    <link rel="stylesheet" href="about-me.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Tern</title>
+  <link rel="stylesheet" href="about-me.css" />
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Tern</a>
+  <header>
+    <a href="index.html" class="logo">Tern</a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about-me.html" class="active">about me</a>
-            <a href="education.html">Education</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
 
-    <section class="About-me">
-        <h1>About Me</h1>
-        <p>นี่คือเนื้อหาส่วน About me ของผม/ฉัน ค่ะ</p>
-        <!-- เพิ่มข้อมูลอื่น ๆ ตามต้องการ -->
-    </section>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about-me.html" class="active">About Me</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <div class="about-img">
+      <img src="images/bas.jpg" alt="About Me Photo" />
+    </div>
+    <div class="about-content">
+      <h1>About Me</h1>
+      <p>สวัสดีครับ/ค่ะ! ผมชื่อ <strong>Tern</strong> เป็นนักเรียนที่สนใจในด้าน Web Development, Game และเทคโนโลยีต่าง ๆ 😊</p>
+      <p>ฉันชอบสร้างสรรค์ผลงานด้วย HTML, CSS และ JavaScript เพื่อให้เว็บดูดีและทำงานได้จริง</p>
+      <p>เป้าหมายของฉันคือการพัฒนาทักษะให้เก่งขึ้นทุกวัน และสนุกกับการเรียนรู้ค่ะ</p>
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.onclick = () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('active');
+    };
+  </script>
 </body>
 </html>
