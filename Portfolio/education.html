@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education - Tern</title>
+  <link rel="stylesheet" href="education.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Natthakit Nguyên Srichan</a>
+
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about-me.html">About Me</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Education Section -->
+  <section class="about">
+    <div class="about-content">
+
+      <!-- Section 1 -->
+      <div class="about-img">
+        <img src="images/school.jpg" alt="High School" />
+      </div>
+      <h1 class="typing-effect">High School</h1>
+      <p class="fade-in"><strong>ผมเรียนระดับมัธยมศึกษาที่ โรงเรียนอำนาจเจริญ จังหวัดอำนาจเจริญ</strong></p>
+      <p class="fade-in">ในสายการเรียน วิทยาศาสตร์ – คอมพิวเตอร์ ซึ่งเป็นจุดเริ่มต้นที่ทำให้ผมหลงใหลด้านเทคโนโลยี</p>
+      <p class="fade-in"><strong>ผมชอบการเขียนเว็บ และการเขียนโปรแกรมเชิงสร้างสรรค์ ที่ใช้แก้ปัญหาจริงในชีวิตประจำวัน</strong></p>
+
+      <!-- Section 2 -->
+      <div class="about-img">
+        <img src="images/cs50.jpg" alt="CS50" />
+      </div>
+      <h1 class="typing-effect">Online Learning</h1>
+      <p class="fade-in"><strong>นอกจากเรียนที่โรงเรียน ผมยังเรียนคอร์สออนไลน์อย่าง CS50x ของ Harvard</strong></p>
+      <p class="fade-in">ซึ่งเป็นหลักสูตรพื้นฐานการเขียนโปรแกรมที่ช่วยเสริมความเข้าใจหลายด้าน</p>
+      <p class="fade-in"><strong>ผมใช้เวลาว่างศึกษาด้วยตัวเอง ทั้งภาษา C, Python, HTML/CSS และ JavaScript</strong></p>
+
+      <!-- Section 3 -->
+      <div class="about-img">
+        <img src="images/future.jpg" alt="Future Goals" />
+      </div>
+      <h1 class="typing-effect">My Goals</h1>
+      <p class="fade-in"><strong>ผมตั้งเป้าที่จะเข้าเรียนต่อด้านวิศวกรรมคอมพิวเตอร์ในระดับมหาวิทยาลัย</strong></p>
+      <p class="fade-in">เพื่อพัฒนาทักษะทั้งทางทฤษฎีและปฏิบัติให้แข็งแกร่งยิ่งขึ้น</p>
+      <p class="fade-in"><strong>และใช้ความรู้ในการสร้างสรรค์สิ่งที่ช่วยเปลี่ยนแปลงโลกได้ไม่มากก็น้อย</strong></p>
+
+    </div>
+  </section>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.onclick = () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('active');
+    };
+
+    // Fade-in effect on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.3,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+  </script>
+</body>
+
+</html>
