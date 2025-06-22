@@ -233,17 +233,13 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
-.about-img {
-  margin-bottom: 2rem;
-  text-align: center;
+#logo-typing::after {
+  content: "|";
+  animation: blink 0.7s infinite;
 }
 
-.about-img img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #b74b4b;
-  object-fit: cover;
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 }
