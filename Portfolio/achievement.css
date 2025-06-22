@@ -70,23 +70,22 @@ nav a.active {
 }
 
 .achievement-card {
-  background-color: #1a1a1a;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  width: 280px;
-  box-shadow: 0 0 20px rgba(183, 75, 75, 0.3);
-  transition: 0.3s ease;
+  width: 550px;
+  min-height: 660px;
 }
+
 
 .achievement-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 25px #b74b4b;
 }
 
-.achievement-card i {
-  font-size: 4rem;
-  color: #b74b4b;
-  margin-bottom: 1rem;
+.achievement-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px #b74b4b33;
 }
 
 .achievement-card h2 {
