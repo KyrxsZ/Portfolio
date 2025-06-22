@@ -27,7 +27,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Natthakit Nguyên Srichan</a>
+        <a href="#" class="logo">Natthakit Srichan</a>
         
 
         <nav>
@@ -42,7 +42,7 @@
             <img src="images/main5.png" alt="" />
         </div>
         <div class="home-content">
-            <h1>Hi, It's <span>Tern</span></h1>
+            <h1>Hi, It's <span id="glitch-text" class="glitch">Tern</span></h1>
             <h3 class="typing-text">Also know as <span id="typing"></span></h3>
             <p>Even 1% better than yesterday is still better than yesterday.</p>
             <div class="social-icons">
@@ -96,5 +96,29 @@
           if(texts.length) type();
         });
     </script>
+    <script>
+  const finalText = "Tern";
+  const glitchEl = document.getElementById("glitch-text");
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let frame = 0;
+  let interval = setInterval(() => {
+    let displayed = "";
+    for (let i = 0; i < finalText.length; i++) {
+      if (i < frame) {
+        displayed += finalText[i];
+      } else {
+        displayed += chars[Math.floor(Math.random() * chars.length)];
+      }
+    }
+    glitchEl.textContent = displayed;
+    frame++;
+    if (frame > finalText.length) {
+      clearInterval(interval);
+      glitchEl.textContent = finalText;
+      glitchEl.style.borderRight = "none"; // เอา caret ออก
+    }
+  }, 100);
+</script>
+
 </body>
 </html>

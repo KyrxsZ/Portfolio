@@ -204,6 +204,19 @@ span{
     padding-right: 4px;
     animation: blink-caret 0.7s step-end infinite;
 }
+.glitch {
+  color: #b74b4b;
+  border-right: 3px solid #b74b4b;
+  padding-right: 5px;
+  font-family: 'Poppins', sans-serif;
+  animation: blink-caret 10s step-end infinite;
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: #b74b4b; }
+  50% { border-color: transparent; }
+}
+
 
 @keyframes blink-caret {
     50% { border-color: transparent; }
@@ -233,13 +246,6 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
-#logo-typing::after {
-  content: "|";
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
+    
+    
 }

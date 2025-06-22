@@ -6,47 +6,11 @@
   <title>About Me - Tern</title>
   <link rel="stylesheet" href="about-me.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
-    /* Typing Effect สำหรับ h1 */
-    h1.typing-effect {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid #b74b4b;
-      width: 0;
-      animation:
-        typing 2.5s steps(30, end) forwards,
-        blink-caret 0.75s step-end 3 forwards 2.5s; /* เริ่ม blink หลัง typing เสร็จ */
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink-caret {
-      0%, 100% { border-color: #b74b4b; }
-      50% { border-color: transparent; }
-    }
-
-    /* Fade-in สำหรับ p */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <a href="index.html" class="logo">Natthakit Nguyên</a>
+    <a href="index.html" class="logo">Natthakit Nguyên Srichan</a>
 
     <div class="menu-icon" id="menu-icon">
       <i class="fas fa-bars"></i>
@@ -62,14 +26,20 @@
 
   <!-- About Section -->
   <section class="about">
-    <div class="about-img">
-      <img src="images/kid.jpg" alt="About Me Photo" />
-    </div>
     <div class="about-content">
+
+      <!-- Section 1 -->
+      <div class="about-img">
+        <img src="images/kid.jpg" alt="About Me Photo" />
+      </div>
       <h1 class="typing-effect">About Me</h1>
       <p class="fade-in"><strong>สวัสดีค้าบบบบบผม เติ้ล นะครับ หรือนายณัฐกิตติ์ ศรีจันทร์ 😊</strong></p>
       <p class="fade-in"><strong>เว็ปนี้เป็นที่เก็บผลงานและที่ฝึกฝนสกิล Web Dev, Coding ของผมในเวลาเดียวกันน</strong></p>
 
+      <!-- Section 2 -->
+      <div class="about-img">
+        <img src="images/kid2.jpg" alt="Who am I Photo" />
+      </div>
       <h1 class="typing-effect">Who am I?</h1>
       <p class="fade-in"><strong>สวัสดีอีกทีครับ!! 😊 ผมนายณัฐกิตติ์ ศรีจันทร์ หรือชื่อเล่นว่า เติ้ล นะครับ</strong></p>
       <p class="fade-in">ปีนี้ผมมีอายุได้ 18 ปี</p>
@@ -78,10 +48,15 @@
       <p class="fade-in"><strong>การที่ผมเป็นลูกครึ่ง ทุกคนคงคิดว่าผมพูดภาษาเวียดได้แน่เลย</strong></p>
       <p class="fade-in">และแน่นอนครับ... ผมพูดไม่ได้สักคำ ขอบคุณครับ 😅</p>
 
+      <!-- Section 3 -->
+      <div class="about-img">
+        <img src="images/inspiration.jpg" alt="Inspiration Photo" />
+      </div>
       <h1 class="typing-effect">Inspiration</h1>
       <p class="fade-in"><strong>แรงบันดาลใจของผมเป็นอะไรที่เรียบง่ายมากเลยครับ</strong></p>
       <p class="fade-in"><strong>ผมเป็นคนชอบเรียนภาษาตั้งแต่อายุยังน้อย และผมในวัยเด็กก็สงสัยว่าอุปกรณ์อิเล็กทรอนิกส์พวกนี้คุยกันภาษาอะไรนะะ</strong></p>
       <p class="fade-in"><strong>เลยทำให้ผมศึกษาและคลุกคลีกับเรื่องพวกนี้มาตั้งแต่เด็ก</strong></p>
+
     </div>
   </section>
 
@@ -112,6 +87,5 @@
 
     faders.forEach(el => appearOnScroll.observe(el));
   </script>
-
 </body>
 </html>
