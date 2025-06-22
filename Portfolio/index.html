@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio Website</title>
+    <style>
+        /* ตัวอย่าง CSS เล็กๆ สำหรับ typing effect */
+        .typing-text {
+            font-size: 3.4rem;
+            font-weight: 600;
+            min-width: 280px;
+            color: white;
+        }
+        .typing-text span {
+            border-right: 3px solid #b74b4b;
+            padding-right: 4px;
+            animation: blink-caret 0.7s step-end infinite;
+        }
+        @keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Natthakit</a>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="#" >About me</a>
+            <a href="#" >Education</a>
+            <a href="#" >Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="" />
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Tern</span></h1>
+            <h3 class="typing-text">I'm a <span id="typing"></span></h3>
+            <p>INTRODUC</p>
+            <div class="social-icons">
+                <a href="https://open.spotify.com/user/31if6pkulxkb5gi5jd53kjpe5rli"><i class="fa-brands fa-spotify"></i></a>
+                <a href="https://github.com/KyrxsZ"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/kkyrxsz/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://discord.com/users/599184862812831744"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <a href="#" class="btn">Achievement</a>
+        </div>
+    </section>
+
+    <script>
+        const texts = [
+          "Web Developer รุ่นน้อย",
+          "Developer ตัวน้อย",
+          "Gamer ตัวพ่อ",
+          "Learner Enjoyer",
+          "Script Writer"
+        ];
+
+        let count = 0;
+        let index = 0;
+        let letter = '';
+        const typingElement = document.getElementById('typing');
+
+        function type() {
+          if (index < texts[count].length) {
+            letter = texts[count].slice(0, index + 1);
+            typingElement.textContent = letter;
+            index++;
+            setTimeout(type, 150);
+          } else {
+            setTimeout(erase, 1500);
+          }
+        }
+
+        function erase() {
+          if (index > 0) {
+            letter = texts[count].slice(0, index - 1);
+            typingElement.textContent = letter;
+            index--;
+            setTimeout(erase, 100);
+          } else {
+            count++;
+            if (count >= texts.length) count = 0;
+            setTimeout(type, 500);
+          }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+          if(texts.length) type();
+        });
+    </script>
+</body>
+</html>
