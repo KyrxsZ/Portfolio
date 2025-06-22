@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Tern</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Natthakit Nguyên Srichan</a>
+
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about-me.html">About Me</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="about">
+    <div class="about-content">
+
+      <div class="about-img">
+        <img src="images/contact.jpg" alt="Contact Image" />
+      </div>
+
+      <h1 class="typing-effect">Contact me :)</h1>
+
+      <p class="fade-in"><strong>คุณสามารถติดต่อผมผ่านช่องทางต่าง ๆ ด้านล่างนี้ได้เลยนะครับ 😊</strong></p>
+
+      <div class="social-icons">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNvNLWfRglKBDhNtDLQFJklzqFKwGbDJCNRVnxMPPJMRsJKMdWMbnLJcfQhMGbSsRlmlSV"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/KyrxsZ" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/kkyrxsz/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://discord.com/users/599184862812831744" target="_blank"><i class="fa-brands fa-discord"></i></a>
+      </div>
+
+      <p class="fade-in">หรือจะส่งอีเมลมาก็ได้นะครับ: <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNvNLWfRglKBDhNtDLQFJklzqFKwGbDJCNRVnxMPPJMRsJKMdWMbnLJcfQhMGbSsRlmlSV" style="color:#b74b4b;">Nuttakit10t@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- JavaScript for Navbar & Animation -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.onclick = () => {
+      navbar.classList.toggle('active');
+      menuIcon.classList.toggle('active');
+    };
+
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.3,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+  </script>
+
+</body>
+</html>
