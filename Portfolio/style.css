@@ -19,7 +19,7 @@ body{
     height: 100vh;
     overflow-x: hidden;
     background-color: black;
-    color: white;
+    color: whitesmoke;
 }
 
 header{
@@ -65,35 +65,28 @@ nav a.active{
 }
 
 @media(max-width:995px){
-    nav{
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+        text-align: center;
     }
 
-    nav.active{
-        display: block;
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
     }
 
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+    .home-content h1 {
+        font-size: 4.5rem;
     }
 
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
     }
 }
 
@@ -147,6 +140,7 @@ span{
     font-size: 1.8rem;
     font-weight: 500;
 }
+
 
 .social-icons a{
     display: inline-flex;
