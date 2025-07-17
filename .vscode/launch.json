@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "e:\\Code\\Portfolio\\Portfolio\\index.html"
+            "file": "e:\\Coding Collector\\Portfolio\\Portfolio\\index.html"
         }
     ]
 }
