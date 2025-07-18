@@ -1,2 +1,3 @@
 # Portfolio
-This is a portfolio project that showcases various web development skills and technologies. It includes a collection of projects, each demonstrating different aspects of web development.
+This is personal portfolio made by knowhow.
+Use can use this as template or ideas what every you want.
